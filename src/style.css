@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*::-webkit-scrollbar{
+	width: 15px;
+	/*tamanho do scrol*/
+
+}
+*::-webkit-scrollbar-track{
+	background-color: black;
+	/*cor de fundo do scrol*/
+
+}
+*::-webkit-scrollbar-thumb{
+	background-color: #ffffff;
+	border-radius: 10px;
+	border: 3px solid #060606;
+	/*comando para deixar barrinha do scrol fina*/
+}
+
+
+
+body {
+	font-family: "Poppins", sans-serif;
+	max-width: 1280px;
+	text-decoration: none;
+	overflow: hidden;
+
+	
+}
+
+.carrossel {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+	text-decoration: none;
+
+
+
+}
+
+.informacoes {
+	display: none;
+}
+
+.informacoes.ativa {
+	display: block;
+	
+}
+
+.conteudo {
+	
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	
+}
+
+.informacoes h1 {
+	
+	font-size: 40px;
+	color: #ffffff;
+	margin-bottom: 80px;
+	font-family: "GOT";
+	letter-spacing: 8px;
+	display: block;
+	
+	
+}
+
+@font-face {
+	font-family: "GOT";
+	src: url(../fontes/GOT.ttf);
+}
+
+.informacoes .descricao {
+	width: 49%;
+	font-size: 24px;
+	color: #baabab;
+	line-height: 40px;
+	height: 300px;
+	overflow: auto;
+	padding-right: 15px;
+		font-family: "Bebas Neue", sans-serif;	  
+}
+
+.botoes-carrossel {
+	display: flex;
+	gap: 20px;
+}
+
+.botoes-carrossel .botao {
+	background-color: #ffffff;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 2px solid transparent;
+	cursor: pointer;
+	border-color: #060606;
+}
+
+.botoes-carrossel .botao.selecionado {
+	background-color: #26f406;
+}
+
+.imagem {
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	display: none;
+}
+
+.imagem.ativa {
+	
+	display: block;
+	animation: mudarImagem 0.7s;
+	
+}
+
+@keyframes mudarImagem {
+	from {
+		opacity: 0.85;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+main:after {
+	content: "";
+	min-height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
+    z-index: -1;
+}
+
+
+.formulario{
+color: #ffffff;
+text-decoration: double;
+
+
+}
